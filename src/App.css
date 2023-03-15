@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.topBarParentDiv{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBarChildDiv{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.topbarText{
+  border-right: 1px solid #000;
+  padding: 10px;
+  height: 40px;
+}
+.topbarText p{
+  color: #9e1551;
+}
+.fa-brands{
+  color: #9e1551;
+}
+.navbar-brand img{
+  width: 190px;
+}
+.gap-5px{
+  gap: 5px;
+}
+
+.gap-10px{
+  gap: 10px;
+}
+
+.h-500{
+  height: 500px;
+}
