@@ -76,3 +76,19 @@
 .h-500{
   height: 500px;
 }
+.statename{
+  background-color: #9e1551;
+  background: #9e1551;
+  color: #fff;
+  width:120px;
+  height:160px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-right: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+.cl-w{
+  background:#9e1551;
+  color: #fff;
+}

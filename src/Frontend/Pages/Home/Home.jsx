@@ -2,21 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
-
-  const[handleDropdownMenu, setHandleDropdownMenu] = useState(false)
+  const [handleDropdownMenu, setHandleDropdownMenu] = useState(false);
 
   const toggleSubMenu = () => {
-    setHandleDropdownMenu(true)
+    setHandleDropdownMenu(true);
     console.log(handleDropdownMenu);
-  }
+  };
 
-  const[disableState, setDisableState] = useState(true)
+  const [disableState, setDisableState] = useState(true);
 
-  const  toggleSubMenu1 = () => {
-    setDisableState(false)
+  const toggleSubMenu1 = () => {
+    setDisableState(false);
     console.log(disableState);
-  }
-
+  };
 
   return (
     <>
@@ -57,62 +55,86 @@ export const Home = () => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="#">
-             <img src="https://acharan.in/img/logo.png" alt="achran" />
+              <img src="https://acharan.in/img/logo.png" alt="achran" />
             </Link>
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#offcanvasRight" 
+              aria-controls="offcanvasRight"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div
+              class="offcanvas offcanvas-end cl-w"
+              tabindex="-1"
+              id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel"
+            >
+              <div class="offcanvas-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                {" "}
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="#">
-                  मध्य प्रदेश
+                    मध्य प्रदेश
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
-                  देश
+                    देश
                   </Link>
                 </li>
                 <li className="nav-item" onMouseEnter={toggleSubMenu}>
-                    Dropdown
+                  Dropdown
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
-                  दुनिया
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                  मनोरंजन
+                    दुनिया
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
-                  खेल
+                    मनोरंजन
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#" onMouseEnter={() => setDisableState(false)} onMouseLeave={() => setDisableState(true)} >
-                  राज्य
+                  <Link className="nav-link" to="#">
+                    खेल
                   </Link>
-                  { !disableState ?  
-                      <div>
-                        <p>Alpas</p>
-                        <p>Alpas</p>
-                        <p>Alpas</p>
-                      </div>
-                    :
-                    ''
-                  }
+                </li>
+                <li
+                  className="nav-item"
+                  onMouseOver={() => setDisableState(false)}
+                  onMouseLeave={() => setDisableState(true)}
+                >
+                  <Link
+                    className="nav-link"
+                    to="#"
+                    onMouseOver={() => setDisableState(false)}
+                    onMouseLeave={() => setDisableState(true)}
+                  >
+                    राज्य
+                  </Link>
+                  {!disableState ? (
+                    <div
+                      style={{ zIndex: "1", position: "absolute" }}
+                      className="statename"
+                    >
+                      <p>Alpas</p>
+                      <p>Alpas</p>
+                      <p>Alpas</p>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </li>
                 <li className="nav-item dropdown">
                   <Link
@@ -124,10 +146,8 @@ export const Home = () => {
                   >
                     Dropdown
                   </Link>
-                  
-                  
-                  {
-                    handleDropdownMenu == true ?
+
+                  {handleDropdownMenu == true ? (
                     <>
                       <ul className="dropdown-menu">
                         <li>
@@ -150,25 +170,25 @@ export const Home = () => {
                         </li>
                       </ul>
                     </>
-                    :
-                    ''
-                  }
+                  ) : (
+                    ""
+                  )}
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link disabled">Disabled</Link>
                 </li>
-              </ul>
-              <form className="d-flex" role="search">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
+                <form className="d-flex" role="search">
+                  <input
+                    className="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button className="btn btn-outline-success" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </nav>
@@ -206,21 +226,49 @@ export const Home = () => {
         <div id="carouselExample" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="https://lh3.googleusercontent.com/x1WyFcrzqNGHScnBcYQsaJcmss_VyxqK0Zlwa5dPY5vPOPSw899OfesiTH9GLnoG8Us=h500" className="d-block w-100 h-500" alt="..." />
+              <img
+                src="https://lh3.googleusercontent.com/x1WyFcrzqNGHScnBcYQsaJcmss_VyxqK0Zlwa5dPY5vPOPSw899OfesiTH9GLnoG8Us=h500"
+                className="d-block w-100 h-500"
+                alt="..."
+              />
             </div>
             <div className="carousel-item">
-              <img src="https://lh3.googleusercontent.com/x1WyFcrzqNGHScnBcYQsaJcmss_VyxqK0Zlwa5dPY5vPOPSw899OfesiTH9GLnoG8Us=h500" className="d-block w-100 h-500" alt="..." />
+              <img
+                src="https://lh3.googleusercontent.com/x1WyFcrzqNGHScnBcYQsaJcmss_VyxqK0Zlwa5dPY5vPOPSw899OfesiTH9GLnoG8Us=h500"
+                className="d-block w-100 h-500"
+                alt="..."
+              />
             </div>
             <div className="carousel-item">
-              <img src="https://lh3.googleusercontent.com/x1WyFcrzqNGHScnBcYQsaJcmss_VyxqK0Zlwa5dPY5vPOPSw899OfesiTH9GLnoG8Us=h500" className="d-block w-100 h-500" alt="..." />
+              <img
+                src="https://lh3.googleusercontent.com/x1WyFcrzqNGHScnBcYQsaJcmss_VyxqK0Zlwa5dPY5vPOPSw899OfesiTH9GLnoG8Us=h500"
+                className="d-block w-100 h-500"
+                alt="..."
+              />
             </div>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
             <span className="visually-hidden">Previous</span>
           </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
