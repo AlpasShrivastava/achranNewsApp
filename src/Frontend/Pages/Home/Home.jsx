@@ -19,8 +19,8 @@ export const Home = () => {
   return (
     <>
       <div className="container">
-        <div className="topBarParentDiv">
-          <div className="topBarChildDiv">
+        <div className="topBarParentDiv fnt-9">
+          <div className="topBarChildDiv ">
             <div className="topbarText">
               <p>शक्ति</p>
             </div>
@@ -52,7 +52,7 @@ export const Home = () => {
             <i className="fa-brands fa-twitter"></i>
           </div>
         </div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary achranBorder">
           <div className="container-fluid">
             <Link className="navbar-brand" to="#">
               <img src="https://acharan.in/img/logo.png" alt="achran" />
@@ -60,19 +60,19 @@ export const Home = () => {
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="offcanvas" 
-              data-bs-target="#offcanvasRight" 
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
-              class="offcanvas offcanvas-end cl-w"
+              class="offcanvas offcanvas-end "
               tabindex="-1"
               id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel"
             >
-              <div class="offcanvas-header">
+              <div class="offcanvas-header cl-w-1">
                 <button
                   type="button"
                   class="btn-close"
@@ -80,147 +80,151 @@ export const Home = () => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="offcanvas-body">
-                {" "}
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="#">
-                    मध्य प्रदेश
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    देश
-                  </Link>
-                </li>
-                <li className="nav-item" onMouseEnter={toggleSubMenu}>
-                  Dropdown
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    दुनिया
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    मनोरंजन
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    खेल
-                  </Link>
-                </li>
-                <li
-                  className="nav-item"
-                  onMouseOver={() => setDisableState(false)}
-                  onMouseLeave={() => setDisableState(true)}
-                >
-                  <Link
-                    className="nav-link"
-                    to="#"
+              <div class="offcanvas-body cl-w cl-w-1 hearder-d">
+                <ul className="d-f-g-29">
+                  <li>
+                    <Link
+                      className="nav-link active fnt-20"
+                      aria-current="page"
+                      to="#"
+                    >
+                      मध्य प्रदेश
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="#">
+                      देश
+                    </Link>
+                  </li>
+                  <li className="nav-item" onMouseEnter={toggleSubMenu}>
+                    Dropdown
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="#">
+                      दुनिया
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="#">
+                      मनोरंजन
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="#">
+                      खेल
+                    </Link>
+                  </li>
+                  <li
+                    className="nav-item"
                     onMouseOver={() => setDisableState(false)}
                     onMouseLeave={() => setDisableState(true)}
                   >
-                    राज्य
-                  </Link>
-                  {!disableState ? (
-                    <div
-                      style={{ zIndex: "1", position: "absolute" }}
-                      className="statename"
+                    <Link
+                      className="nav-link"
+                      to="#"
+                      onMouseOver={() => setDisableState(false)}
+                      onMouseLeave={() => setDisableState(true)}
                     >
-                      <p>Alpas</p>
-                      <p>Alpas</p>
-                      <p>Alpas</p>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                </li>
-                <li className="nav-item dropdown">
-                  <Link
-                    className="nav-link dropdown-toggle"
-                    to="#"
-                    role="button"
-                    // data-bs-toggle="dropdown"
-                    // aria-expanded="false"
-                  >
-                    Dropdown
-                  </Link>
+                      राज्य
+                    </Link>
+                    {!disableState ? (
+                      <div
+                        style={{ zIndex: "1", position: "absolute" }}
+                        className="statename"
+                      >
+                        <p className="mg-r-45">मध्य प्रदेश</p>
+                        <span className="b-1"></span>
+                        <p className="mg-r-45">मध्य प्रदेश</p>
+                        <span className="b-1"></span>
+                        <p className="mg-r-45">मध्य प्रदेश</p>
+                        <span className="b-1"></span>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      to="#"
+                      role="button"
+                      // data-bs-toggle="dropdown"
+                      // aria-expanded="false"
+                    >
+                      Dropdown
+                    </Link>
 
-                  {handleDropdownMenu == true ? (
-                    <>
-                      <ul className="dropdown-menu">
-                        <li>
-                          <Link className="dropdown-item" to="#">
-                            Action
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="#">
-                            Another action
-                          </Link>
-                        </li>
-                        <li>
-                          <hr className="dropdown-divider" />
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="#">
-                            Something else here
-                          </Link>
-                        </li>
-                      </ul>
-                    </>
-                  ) : (
-                    ""
-                  )}
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link disabled">Disabled</Link>
-                </li>
-                <form className="d-flex" role="search">
+                    {handleDropdownMenu == true ? (
+                      <>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <Link className="dropdown-item" to="#">
+                              Action
+                            </Link>
+                          </li>
+                          <li>
+                            <Link className="dropdown-item" to="#">
+                              Another action
+                            </Link>
+                          </li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li>
+                            <Link className="dropdown-item" to="#">
+                              Something else here
+                            </Link>
+                          </li>
+                        </ul>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </li>
+                  {/* <li className="nav-item">
+                  <Link className="nav-link disabled ">Disabled</Link>
+                </li> */}
+                </ul>
+                <form className="d-flex search-f-button" role="search">
                   <input
-                    className="form-control me-2"
+                    className="form-control me-2 searchbutton"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
-                  />
-                  <button className="btn btn-outline-success" type="submit">
+                  ></input>
+                  <i class="fa fa-search search-icon" aria-hidden="true" />
+                  {/* <button className="btn btn-outline-successb search-button" type="submit">
                     Search
-                  </button>
+                  </button>*/}
                 </form>
               </div>
             </div>
           </div>
         </nav>
 
-        <div className="d-flex gap-10px">
+        <div className="d-flex gap-10px fnt-9 overflowXAuto mar-t14">
           <div className="">
-            <p>Shakti</p>
+            <p className="text-nowrap ">आचरण फोकस</p>
           </div>
           <div className="">
-            <p>Shakti</p>
+            <p className="text-nowrap achranBarText">Top News</p>
           </div>
           <div className="">
-            <p>Shakti</p>
+            <p className="text-nowrap achranBarText">अन्य</p>
           </div>
           <div className="">
-            <p>Shakti</p>
+            <p className="text-nowrap achranBarText">पॉजिटिव खबरें</p>
           </div>
           <div className="">
-            <p>Shakti</p>
+            <p className="text-nowrap achranBarText">वेब स्टोरीज</p>
           </div>
           <div className="">
-            <p>Shakti</p>
+            <p className="text-nowrap achranBarText">राजनीति</p>
           </div>
-          <div className="">
-            <p>Shakti</p>
-          </div>
-          <div className="">
-            <p>Shakti</p>
-          </div>
-          <div className="">
-            <p>Shakti</p>
-          </div>
+        </div>
+
+        <div>
+          <span></span>
         </div>
 
         <div id="carouselExample" className="carousel slide">
