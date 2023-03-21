@@ -276,6 +276,38 @@ export const Home = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
+
+        <div className="row mt-4">
+          <div className="col-md-6">
+            <img src="https://acharan.in/Admin_panel/public/image/news_image/1678975219.jpg" className="w-100 rounded" alt="" />
+          </div>
+          <div className="col-md-6">
+            <div className="row">
+              <div className="col-md-6">
+                <div>
+                  <img src="https://acharan.in/Admin_panel/public/image/news_image/1678975219.jpg" className="w-100 rounded" alt="" />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div>
+                  <img src="https://acharan.in/Admin_panel/public/image/news_image/1678975219.jpg" className="w-100 rounded" alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="row mt-3">
+              <div className="col-md-6">
+                <div>
+                  <img src="https://acharan.in/Admin_panel/public/image/news_image/1678975219.jpg" className="w-100" alt="" />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div>
+                  <img src="https://acharan.in/Admin_panel/public/image/news_image/1678975219.jpg" className="w-100" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
