@@ -206,3 +206,52 @@ border-bottom: 1px solid rgb(221 221 221);
   color: #9e1551;
   font-weight: 500;
 }
+.lifeAndScience{
+  display: flex;
+  overflow: auto;
+  gap: 35px;
+  justify-content: center;
+}
+.lifeAndScienceButton{
+  white-space: nowrap;
+  background: #fff;
+  border: 2px solid #221657;
+  color: #221657;
+  border-radius: 50px;
+  font-size: 14px;
+  padding: 10px;
+}
+.lifeAndScienceButton:hover{
+  color: #fff;
+  background: #221657;
+}
+.marqText{
+  color: #9e1551;
+  font-size: 40px;
+}
+.col_Img{
+  max-width: 100%;
+
+}
+.card_div{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-top: 6px solid #9e1551;
+}
+.card_icon{
+  font-size: 35px;
+    position: relative;
+    bottom: 32px;
+    color: #9e1551;
+}
+.rajniti_h5{
+  position: relative;
+  bottom: 32px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.rajniti_text{
+  font-size: 25px;
+}
+.rajniti_spl{
+  color: #9e1551;
+}
