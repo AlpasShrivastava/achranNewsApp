@@ -225,6 +225,7 @@ function Header() {
             </div>
 
             <Outlet />
+            {/* footer */}
         </div>
         </>
     );

@@ -94,6 +94,11 @@ export const Home = () => {
 
       <div className="row">
         <div className="col-sm-3">
+          <div className="desh_div">
+            <img src="https://acharan.in/img/myapp.jpg" alt="" />
+          </div>
+          <h2></h2>
+
           <div className="row mt-4">
             <div className="col-sm-4">
               <img
@@ -150,8 +155,8 @@ export const Home = () => {
             </div>
             <h5 className="rajniti_h5">राजनीति</h5>
             <p className="rajniti_text">
-               <span className="rajniti_spl">राजनीति -</span> ममता की नवीन पटनायक से मुलाकात, तीसरे मोर्चा को लेकर
-              बनेगी बात
+              <span className="rajniti_spl">राजनीति -</span> ममता की नवीन पटनायक
+              से मुलाकात, तीसरे मोर्चा को लेकर बनेगी बात
             </p>
             <img
               src="https://acharan.in/Admin_panel/public/image/news_image/1679576169.jpg"
@@ -160,6 +165,10 @@ export const Home = () => {
           </div>
         </div>
         <div className="col-sm-3">
+          <div className="desh_div">
+            <img src="https://acharan.in/img/myapp.jpg" alt="" />
+          </div>
+          <h2></h2>
           <div className="row mt-4">
             <div className="col-sm-4 col_Img">
               <img
