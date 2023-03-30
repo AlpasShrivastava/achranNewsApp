@@ -317,7 +317,7 @@ border-bottom: 1px solid rgb(221 221 221);
 .Footer_main{
   background-color: #9e1551;
   color: #f1f0f3;
-  padding: 10px;
+  padding: 15px;
 }
 
 .h-50px{
@@ -341,4 +341,9 @@ border-bottom: 1px solid rgb(221 221 221);
   padding: 6px;
   border-radius: 5px;
   font-size: 20px;
+}
+.footer_line{
+  color: #fff;
+  opacity: 20;
+
 }
