@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import UseTest from "./useState";
 
 function Header() {
+  // usestate
+  // const [state, setState] = useState();
+  // const onValChange= (event) => {
+  //     const newVal = event.target.value;
+  //     setState(newVal);
+  // }
+  // 123
+
   const [handleDropdownMenu, setHandleDropdownMenu] = useState(false);
 
   const toggleSubMenu = () => {
@@ -225,6 +234,7 @@ function Header() {
 
         <Outlet />
 
+        {/* <UseTest /> */}
         {/* footer */}
         <div className="Footer_main">
           <div className="row">
@@ -261,38 +271,84 @@ function Header() {
           <hr className="footer_line"></hr>
           <div className="row">
             <div className="col-sm-3">
-            <p>Quick Links</p>
-            <p>देश</p>
-            <p>दुनिया</p>
-            <p>मनोरंजन</p>
-            <p>खेल</p>
-            <p>राज्य</p>
-            <p>लाइफ़्स्टायल</p>
-            <p>राशिफल</p>
-            <p>बिज़्नेस</p>
-            <p>हेल्थ</p>
-            <p>कैरीअर</p>
+              <p className="fs_25">Quick Links</p>
+              <p>देश</p>
+              <p>दुनिया</p>
+              <p>मनोरंजन</p>
+              <p>खेल</p>
+              <p>राज्य</p>
+              <p>लाइफ़्स्टायल</p>
+              <p>राशिफल</p>
+              <p>बिज़्नेस</p>
+              <p>हेल्थ</p>
+              <p>कैरीअर</p>
             </div>
             <div className="col-sm-3">
-            <p>Quick Links</p>
-            <p>मध्य प्रदेश</p>
-            <p>उत्तरप्रदेश</p>
-            <p>राजस्थान</p>
+              <p className="fs_25">Quick Links</p>
+              <p>मध्य प्रदेश</p>
+              <p>उत्तरप्रदेश</p>
+              <p>राजस्थान</p>
             </div>
             <div className="col-sm-3">
-                <p>Latest News</p>
-                <p>मैगजीन</p>
-                <p>बॉलीवुड</p>
-                <p>जीवन मंत्र</p>
-                <p>यूटिलिटी</p>
-                <p>लाइफ & साइंस</p>
-                <p>फैशन</p>
-                <p>क्रिकेट</p>
-                <p>शक्ति</p>
+              <p>Latest News</p>
+              <p>मैगजीन</p>
+              <p>बॉलीवुड</p>
+              <p>जीवन मंत्र</p>
+              <p>यूटिलिटी</p>
+              <p>लाइफ & साइंस</p>
+              <p>फैशन</p>
+              <p>क्रिकेट</p>
+              <p>शक्ति</p>
             </div>
             <div className="col-sm-3">
-                <p>हमसे सम्पर्क करें</p>
-                <p><i class="fa-solid fa-location-dot"></i><span>&nbsp;&nbsp;&nbsp;Acharan Tower, 45/A City Centre, Gwalior-474001,</span></p>
+              <p>हमसे सम्पर्क करें</p>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                  &nbsp;&nbsp;&nbsp;Acharan Tower, 45/A City Centre,
+                  Gwalior-474001,
+                </span>
+              </p>
+              <p>
+                <i class="fa-solid fa-phone"></i>{" "}
+                <span>&nbsp;दूरभाषः- +91-8879259412</span>{" "}
+              </p>
+
+              <p>
+                <i class="fa-regular fa-envelope-open"></i>
+                <span>&nbsp;&nbsp;info@acharan.in</span>{" "}
+              </p>
+            </div>
+          </div>
+          <hr className="footer_line2"></hr>
+          <div className="row">
+            <div className="col-sm-6">
+              <span>
+                | About us &nbsp;| Advertise with us &nbsp; | Careers &nbsp;|
+                Privacy &nbsp;| Cookies &nbsp;| Policy &nbsp;| Contact Us &nbsp;{" "}
+              </span>
+              <span>
+                | Terms and Conditions | Products and Services | RSS Feeds |
+                Sitemap Code of Ethics
+              </span>
+              <span>Delete All Cookies</span>
+            </div>
+            <div className="col-sm-2"></div>
+            <div className="col-sm-4">
+              <input
+                type="text"
+                name="name"
+                className="footer_input"
+                placeholder="Enter Your Email"
+              />
+              <label>
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  className="footer_input_btn"
+                />
+              </label>
+              <p>© 2021-2022 design by web Hut Technology</p>
             </div>
           </div>
         </div>

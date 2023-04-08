@@ -315,7 +315,7 @@ border-bottom: 1px solid rgb(221 221 221);
   margin-top: -32px;
 }
 .Footer_main{
-  background-color: #9e1551;
+  background-color: #92003b;
   color: #f1f0f3;
   padding: 15px;
 }
@@ -345,5 +345,59 @@ border-bottom: 1px solid rgb(221 221 221);
 .footer_line{
   color: #fff;
   opacity: 20;
+}
+.footer_line2{
+  color: #fff;
+  opacity: 0.5;
+}
+.fs_25{
+  font-size: 25px;
+}
+.footer_input_btn{
+font-size: 22px;
+color: #fff;
+background-color:#a61a57;
+border: none;
+}
+.footer_input{
+  font-size: 22px;
+}
+.details_topCard{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
+.col-sm-8 >.details_topCard  > img{
+  max-width: 100%;
+  width: 100%;
+}
+.details_topCard_p{
+  font-size: 24px;
+}
+.details_topCard_icons{
+  display: flex;
+  align-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  margin: 17px 8px;
+  font-size: 25px;
+  
+}
+.details_vdo_card_div{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-top: 6px solid #9e1551;
+  padding: 0rem 1rem 1rem 1rem;
+  border-bottom: 6px solid #9e1551;
+  
+}
+.details_vdo_card_icon{
+  font-size: 35px;
+    position: relative;
+    bottom: 32px;
+    color: #9e1551;
+}
+.desh_div>img{
+  max-width: 100%;
+  border-bottom: 2px solid #9e1551;
 }
