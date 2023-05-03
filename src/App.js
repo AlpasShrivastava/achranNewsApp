@@ -14,7 +14,6 @@ function App() {
          <Route exact path ="/use-state" element={<useState />}/>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/details" element={<Details />} />
-          
         </Route>
       </Routes>
     </>
